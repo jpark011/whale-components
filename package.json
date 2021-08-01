@@ -4,7 +4,8 @@
   "description": "lit & minimal UI Components",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "build:watch": "tsc --watch"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,8 @@
   "homepage": "https://github.com/jpark011/whale-components#readme",
   "dependencies": {
     "lit": "^2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "typescript": "~4.3.5"
   }
 }
