@@ -21,4 +21,5 @@
 /out-tsc/
 
 storybook-static
+.rollup.cache/
 *.tsbuildinfo
