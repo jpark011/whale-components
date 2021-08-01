@@ -1,0 +1,26 @@
+{
+  "name": "@jpark011/whale",
+  "version": "1.0.0",
+  "description": "lit & minimal UI Components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpark011/whale-components.git"
+  },
+  "keywords": [
+    "lit",
+    "whale",
+    "components",
+    "web-component",
+    "custom-element"
+  ],
+  "author": "Jay Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpark011/whale-components/issues"
+  },
+  "homepage": "https://github.com/jpark011/whale-components#readme"
+}
