@@ -10,6 +10,7 @@
     "outDir": "dist",
     "rootDir": "./src",
     "strict": true,
+    "types": ["mocha"],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
