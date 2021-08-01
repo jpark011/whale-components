@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/jpark011/whale-components/issues"
   },
-  "homepage": "https://github.com/jpark011/whale-components#readme"
+  "homepage": "https://github.com/jpark011/whale-components#readme",
+  "dependencies": {
+    "lit": "^2.0.0-rc.2"
+  }
 }
