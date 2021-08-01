@@ -1,0 +1,4 @@
+node_modules/*
+docs/*
+rollup-config.js
+custom-elements.json
