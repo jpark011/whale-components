@@ -2,11 +2,12 @@
   "name": "@jpark011/whale",
   "version": "1.0.0",
   "description": "lit & minimal UI Components",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
     "build": "rollup -c",
-    "build:watch": "rollup -c -w",
+    "start": "wds --watch",
     "lint": "eslint \"src/**/*.{js,ts}\" && lit-analyzer",
     "format": "prettier --write .",
     "analyze": "wca analyze \"src/**/*.ts\" --outFile custom-elements.json"
@@ -36,6 +37,8 @@
     "@rollup/plugin-typescript": "^8.2.5",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",
+    "@web/dev-server": "^0.1.20",
+    "@web/dev-server-esbuild": "^0.2.12",
     "@web/rollup-plugin-copy": "^0.3.0",
     "@web/rollup-plugin-html": "^1.9.1",
     "eslint": "^7.32.0",
