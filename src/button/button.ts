@@ -1,8 +1,8 @@
 import {css, html, LitElement} from 'lit';
 import {customElement} from 'lit/decorators.js';
 
-@customElement('bw-button')
-export default class BwButton extends LitElement {
+@customElement('wl-button')
+export default class WlButton extends LitElement {
   static styles = css`
     :host {
       background-color: var(--color, blue);
@@ -16,6 +16,6 @@ export default class BwButton extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'bw-button': BwButton;
+    'wl-button': WlButton;
   }
 }
