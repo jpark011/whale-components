@@ -1,0 +1,16 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "bw-button",
+      "path": "./src/button/button.ts",
+      "properties": [
+        {
+          "name": "styles",
+          "type": "CSSResultGroup",
+          "default": "\"css`\\n    :host {\\n      background-color: var(--color, blue);\\n    }\\n  `\""
+        }
+      ]
+    }
+  ]
+}

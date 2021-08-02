@@ -2,8 +2,11 @@
   "name": "@jpark011/whale",
   "version": "1.0.0",
   "description": "lit & minimal UI Components",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "customElements": "dist/custom-elements.json",
   "type": "module",
-  "main": "index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "husky install",
     "build": "rollup -c",
@@ -63,11 +66,12 @@
     "rollup-plugin-terser": "^7.0.2",
     "sinon": "^11.1.2",
     "ts-lit-plugin": "^1.2.1",
+    "tslib": "^2.3.0",
     "typescript": "~4.3.5",
     "web-component-analyzer": "^1.1.6"
   },
   "lint-staged": {
     "*.{ts,js}": "eslint --fix",
-    "*.{ts,js,json,html,css}": "prettier --check"
+    "*.{ts,js,json,html,css}": "prettier --write"
   }
 }
