@@ -2,7 +2,7 @@ import {expect, fixture, html} from '@open-wc/testing';
 import WlButton from './button';
 
 describe('Button', () => {
-  beforeEach(async () => {
+  before(async () => {
     await import('./button');
   });
 

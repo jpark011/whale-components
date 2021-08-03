@@ -1,1 +1,1 @@
-export {default as BwButton} from './button/button';
+export {default as BwButton} from './components/button/button';

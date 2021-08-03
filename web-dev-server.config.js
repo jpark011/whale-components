@@ -1,11 +1,16 @@
 import {esbuildPlugin} from '@web/dev-server-esbuild';
 
-export default {
+export const baseConfig = {
   preserveSymlinks: true,
-  rootDir: './demo/',
-  open: true,
-  watch: true,
   nodeResolve: true,
   plugins: [esbuildPlugin({ts: true})],
   esbuildTarget: 'auto',
+};
+
+export default {
+  ...baseConfig,
+  rootDir: './',
+  appIndex: './demo/index.html',
+  open: true,
+  watch: true,
 };

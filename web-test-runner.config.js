@@ -1,9 +1,6 @@
-import {esbuildPlugin} from '@web/dev-server-esbuild';
+import {baseConfig} from './web-dev-server.config.js';
 
 export default {
+  ...baseConfig,
   files: './src/**/*.test.ts',
-  nodeResolve: true,
-  preserveSymlinks: true,
-  plugins: [esbuildPlugin({ts: true})],
-  esbuildTarget: 'auto',
 };
