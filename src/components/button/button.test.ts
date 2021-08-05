@@ -1,4 +1,5 @@
-import {expect, fixture, html} from '@open-wc/testing';
+import {expect, fixture} from '@open-wc/testing';
+import {html} from 'lit';
 import WlButton from './button';
 
 describe('Button', () => {
@@ -9,6 +10,6 @@ describe('Button', () => {
   it('should render', async () => {
     const el = await fixture<WlButton>(html` <wl-button></wl-button> `);
 
-    expect(el).shadowDom.to.equal('<button><slot></slot></button>');
+    await expect(el).shadowDom.to.equalSnapshot();
   });
 });
