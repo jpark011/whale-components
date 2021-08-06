@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
   --wl-color-primary-900: #02172d;
   --wl-color-primary-800: #042f5b;
@@ -58,4 +60,6 @@
   --wl-color-grey-300: #cccccc;
   --wl-color-grey-200: #f2f2f2;
   --wl-color-grey-100: #ffffff;
+
+  font-family: 'Roboto', sans-serif;
 }

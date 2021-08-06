@@ -5,8 +5,10 @@ import minifyHTML from 'rollup-plugin-minify-html-literals';
 import summary from 'rollup-plugin-summary';
 import {terser} from 'rollup-plugin-terser';
 
+const prod = process.env.NODE_ENV === 'prod';
+
 export default {
-  input: 'src/index.ts',
+  input: 'src/main.ts',
   output: {
     dir: 'dist',
     format: 'esm',
@@ -17,13 +19,14 @@ export default {
     // Transpile TS to JS
     typescript(),
     // Minify HTML template literals
-    minifyHTML(),
+    prod && minifyHTML(),
     // Minify JS
-    terser({
-      ecma: 2020,
-      module: true,
-      warnings: true,
-    }),
+    prod &&
+      terser({
+        ecma: 2020,
+        module: true,
+        warnings: true,
+      }),
     // Print bundle summary
     summary(),
     // Optional: copy any static assets to build directory
