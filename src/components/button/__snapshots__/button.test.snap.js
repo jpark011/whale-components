@@ -2,7 +2,7 @@
 export const snapshots = {};
 
 snapshots["Button should render"] = 
-`<button>
+`<button part="button">
   <span class="text">
     <slot>
       BUTTON
