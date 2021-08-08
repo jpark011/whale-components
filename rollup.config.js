@@ -33,6 +33,6 @@ export default {
     // Print bundle summary
     summary(),
     // Optional: copy any static assets to build directory
-    copy({}),
+    copy({rootDir: 'src', patterns: 'assets/**/*'}),
   ],
 };
