@@ -3,7 +3,7 @@ import {esbuildPlugin} from '@web/dev-server-esbuild';
 export const baseConfig = {
   preserveSymlinks: true,
   nodeResolve: true,
-  plugins: [esbuildPlugin({ts: true, target: 'auto'})],
+  plugins: [esbuildPlugin({ts: true, json: true, loaders: {'.svg': 'text'}, target: 'auto'})],
 };
 
 export default {

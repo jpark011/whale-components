@@ -3,6 +3,7 @@ import typescript from '@rollup/plugin-typescript';
 import {copy} from '@web/rollup-plugin-copy';
 import minifyHTML from 'rollup-plugin-minify-html-literals';
 import summary from 'rollup-plugin-summary';
+import svg from 'rollup-plugin-svg';
 import {terser} from 'rollup-plugin-terser';
 
 const prod = process.env.NODE_ENV === 'prod';
@@ -16,6 +17,8 @@ export default {
   plugins: [
     // Resolve bare module specifiers to relative paths
     resolve(),
+    // Import json files
+    svg(),
     // Transpile TS to JS
     typescript(),
     // Minify HTML template literals
