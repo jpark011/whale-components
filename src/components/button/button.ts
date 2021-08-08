@@ -34,7 +34,7 @@ const style = css`
   }
 
   button.secondary {
-    border: 4px solid var(--wl-button-text-color);
+    border: 2px solid var(--wl-button-text-color);
   }
 
   button:hover {
