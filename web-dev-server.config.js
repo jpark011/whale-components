@@ -8,7 +8,7 @@ export const baseConfig = {
 
 export default {
   ...baseConfig,
-  rootDir: './',
+  rootDir: './demo',
   appIndex: './demo/index.html',
   open: true,
   watch: true,

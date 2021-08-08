@@ -1,37 +1,31 @@
 import {css, html, LitElement, TemplateResult} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 import {classMap} from 'lit/directives/class-map.js';
+import {grey, primary, primaryDark, primaryLight, white, whiteDark} from '../../utils/colors';
 
 export type WlButtonType = 'primary' | 'secondary';
 
 const style = css`
   :host {
-    --wl-button-text-color: var(--wl-color-grey-300, white);
-    --wl-button-text-color-light: var(--wl-color-grey-100, white);
-    --wl-button-text-color-dark: var(--wl-color-grey-500, white);
+    --wl-button-text-color: var(--wl-color-grey-100, ${white});
 
-    --wl-button-background-color: var(--wl-color-primary-500, black);
-    --wl-button-background-color-light: var(--wl-color-primary-300, black);
-    --wl-button-background-color-dark: var(--wl-color-primary-700, black);
-
-    --wl-button-disabled-background-color: var(--wl-color-grey-500, darkgrey);
-    --wl-button-disabled-background-color-light: var(--wl-color-grey-300, darkgrey);
-    --wl-button-disabled-background-color-dark: var(--wl-color-grey-700, darkgrey);
+    --wl-button-background-color: var(--wl-color-primary-500, ${primary});
+    --wl-button-hover-background-color: var(--wl-color-primary-300, ${primaryLight});
+    --wl-button-active-background-color: var(--wl-color-primary-700, ${primaryDark});
+    --wl-button-disabled-background-color: var(--wl-color-grey-500, ${grey});
   }
 
   :host([type='secondary']) {
-    --wl-button-text-color: var(--wl-color-primary-500);
-    --wl-button-text-color-light: var(--wl-color-primary-300);
-    --wl-button-text-color-dark: var(--wl-color-primary-700);
+    --wl-button-text-color: var(--wl-color-primary-500, ${primary});
 
-    --wl-button-background-color: var(--wl-color-grey-100, darkgrey);
-    --wl-button-background-color-light: var(--wl-color-grey-300, darkgrey);
-    --wl-button-background-color-dark: var(--wl-color-grey-500, darkgrey);
+    --wl-button-background-color: var(--wl-color-grey-100, ${white});
+    --wl-button-hover-background-color: var(--wl-color-grey-300, ${whiteDark});
+    --wl-button-active-background-color: var(--wl-color-grey-500, ${primaryLight});
   }
 
   button {
     background-color: var(--wl-button-background-color);
-    color: var(--wl-button-text-color-light);
+    color: var(--wl-button-text-color);
     border: none;
     border-radius: 5px;
     padding: 8px 16px;
@@ -39,13 +33,17 @@ const style = css`
     font-weight: bold;
   }
 
+  button.secondary {
+    border: 4px solid var(--wl-button-text-color);
+  }
+
   button:hover {
-    background-color: var(--wl-button-background-color-light);
+    background-color: var(--wl-button-hover-background-color);
     color: var(--wl-button-text-color);
   }
 
   button:active {
-    background-color: var(--wl-button-background-color-dark);
+    background-color: var(--wl-button-active-background-color);
   }
 
   button:disabled {
@@ -64,7 +62,14 @@ export default class WlButton extends LitElement {
   @property({type: Boolean, reflect: true})
   disabled = false;
 
-  protected render(): TemplateResult {
+  private onClick(event: Event) {
+    if (this.disabled) {
+      event.preventDefault();
+      event.stopPropagation;
+    }
+  }
+
+  render(): TemplateResult {
     return html`
       <button
         part="button"
@@ -78,13 +83,6 @@ export default class WlButton extends LitElement {
         <slot part="text" class="text">BUTTON</slot>
       </button>
     `;
-  }
-
-  private onClick(event: Event) {
-    if (this.disabled) {
-      event.preventDefault();
-      event.stopPropagation;
-    }
   }
 }
 

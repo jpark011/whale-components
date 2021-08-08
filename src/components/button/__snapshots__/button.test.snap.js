@@ -2,12 +2,16 @@
 export const snapshots = {};
 
 snapshots["Button should render"] = 
-`<button part="button">
-  <span class="text">
-    <slot>
-      BUTTON
-    </slot>
-  </span>
+`<button
+  class="primary"
+  part="button"
+>
+  <slot
+    class="text"
+    part="text"
+  >
+    BUTTON
+  </slot>
 </button>
 `;
 /* end snapshot Button should render */
