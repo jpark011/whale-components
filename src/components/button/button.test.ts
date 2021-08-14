@@ -11,7 +11,7 @@ describe('Button', () => {
   it('should render', async () => {
     const el = await fixture<WlButton>(html`<wl-button></wl-button>`);
 
-    await expect(el).shadowDom.to.equalSnapshot();
+    expect(el).shadowDom.to.equalSnapshot();
   });
 
   it('should be disabled', async () => {

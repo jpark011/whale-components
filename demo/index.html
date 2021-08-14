@@ -4,12 +4,23 @@
     <!-- <link rel="stylesheet" href="../src/assets/themes/base.css" /> -->
     <style>
       wl-button {
+        margin-left: 5px;
       }
     </style>
   </head>
   <body>
-    <wl-button type="secondary">Hello</wl-button>
-    <wl-icon name="smiling-face-outline"></wl-icon>
+    <wl-button></wl-button>
+    <wl-button disabled></wl-button>
+    <wl-button><wl-icon name="wifi-outline" slot="left-icon"></wl-icon>와이빠이~</wl-button>
+    <wl-button type="secondary"
+      ><wl-icon name="smiling-face-outline" slot="left-icon"></wl-icon
+      ><wl-icon name="arrow-down-outline" slot="right-icon"></wl-icon>이재윤 버튼</wl-button
+    >
+    <wl-button type="secondary"
+      ><wl-icon name="smiling-face-outline" slot="left-icon"></wl-icon
+      ><wl-icon name="arrow-down-outline" slot="right-icon"></wl-icon>Hello Whyg</wl-button
+    >
+
     <script type="module">
       import '../src/main';
     </script>

@@ -11,7 +11,7 @@ describe('Icon', () => {
   it('should render', async () => {
     const el = await fixture<WlIcon>(html`<wl-icon></wl-icon>`);
 
-    await expect(el).shadowDom.to.equalSnapshot();
+    expect(el).shadowDom.to.equalSnapshot();
   });
 
   it('should re-render when name changes', async () => {

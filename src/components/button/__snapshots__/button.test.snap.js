@@ -7,10 +7,20 @@ snapshots["Button should render"] =
   part="button"
 >
   <slot
+    name="left-icon"
+    part="left-icon"
+  >
+  </slot>
+  <slot
     class="text"
     part="text"
   >
     BUTTON
+  </slot>
+  <slot
+    name="right-icon"
+    part="right-icon"
+  >
   </slot>
 </button>
 `;

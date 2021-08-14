@@ -13,6 +13,8 @@ const style = css`
     --wl-button-hover-background-color: var(--wl-color-primary-300, ${primaryLight});
     --wl-button-active-background-color: var(--wl-color-primary-700, ${primaryDark});
     --wl-button-disabled-background-color: var(--wl-color-grey-500, ${grey});
+
+    display: inline-block;
   }
 
   :host([type='secondary']) {
@@ -31,6 +33,10 @@ const style = css`
     padding: 8px 16px;
     font-size: 1rem;
     font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 
   button.secondary {
@@ -80,7 +86,9 @@ export default class WlButton extends LitElement {
         .disabled=${this.disabled}
         @click=${this.onClick}
       >
+        <slot name="left-icon" part="left-icon"></slot>
         <slot part="text" class="text">BUTTON</slot>
+        <slot name="right-icon" part="right-icon"></slot>
       </button>
     `;
   }

@@ -27,7 +27,7 @@ export default class WlIcon extends LitElement {
 
   render(): TemplateResult {
     const style = html`<style>
-      svg {
+      :host {
         fill: currentColor;
         width: ${this.size}px;
         height: ${this.size}px;
