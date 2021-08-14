@@ -9,20 +9,20 @@ describe('Button', () => {
   });
 
   it('should render', async () => {
-    const el = await fixture<WlButton>(html` <wl-button></wl-button> `);
+    const el = await fixture<WlButton>(html`<wl-button></wl-button>`);
 
     await expect(el).shadowDom.to.equalSnapshot();
   });
 
   it('should be disabled', async () => {
-    const el = await fixture<WlButton>(html` <wl-button disabled></wl-button> `);
+    const el = await fixture<WlButton>(html`<wl-button disabled></wl-button>`);
 
     expect(el.disabled).to.equal(true);
     expect(el.shadowRoot?.querySelector('button')?.disabled).to.equal(true);
   });
 
   it('should dispatch click event', async () => {
-    const el = await fixture<WlButton>(html` <wl-button></wl-button> `);
+    const el = await fixture<WlButton>(html`<wl-button></wl-button>`);
     const onClick = spy();
 
     el.addEventListener('click', onClick);

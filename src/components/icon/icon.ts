@@ -1,4 +1,4 @@
-import {css, LitElement, PropertyValues, svg, TemplateResult} from 'lit';
+import {css, html, LitElement, PropertyValues, svg, TemplateResult} from 'lit';
 import {customElement, property, state} from 'lit/decorators.js';
 import {unsafeSVG} from 'lit/directives/unsafe-svg.js';
 
@@ -11,10 +11,13 @@ export default class WlIcon extends LitElement {
   @property({reflect: true})
   name = 'question-mark-circle-outline';
 
-  @state()
-  icon = '';
+  @property({type: Number, reflect: true})
+  size = 24;
 
-  async updated(changedProps: PropertyValues): Promise<void> {
+  @state()
+  private icon = '';
+
+  async updated(changedProps: PropertyValues<this>): Promise<void> {
     if (changedProps.has('name')) {
       this.icon = await import(`../../assets/icons/eva/${this.name}.svg`).then(
         (module) => module.default
@@ -23,7 +26,15 @@ export default class WlIcon extends LitElement {
   }
 
   render(): TemplateResult {
-    return svg` ${unsafeSVG(this.icon)}`;
+    const style = html`<style>
+      svg {
+        fill: currentColor;
+        width: ${this.size}px;
+        height: ${this.size}px;
+      }
+    </style>`;
+
+    return svg`${style} ${unsafeSVG(this.icon)}`;
   }
 }
 
