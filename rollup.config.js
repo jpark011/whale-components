@@ -13,6 +13,7 @@ export default {
   output: {
     dir: 'dist',
     format: 'esm',
+    sourcemap: true,
   },
   plugins: [
     // Resolve bare module specifiers to relative paths
@@ -20,7 +21,7 @@ export default {
     // Import json files
     svg(),
     // Transpile TS to JS
-    typescript(),
+    typescript({tsconfig: './tsconfig.json'}),
     // Minify HTML template literals
     prod && minifyHTML(),
     // Minify JS

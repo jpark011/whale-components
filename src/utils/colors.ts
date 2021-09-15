@@ -8,15 +8,15 @@ export const secondary = css`hsl(212, 100%, 50%)`;
 export const secondaryLight = lighten(secondary);
 export const secondaryDark = darken(secondary);
 
-export const success = css`hselect(134, 100%, 50%)`;
+export const success = css`hsl(134, 100%, 50%)`;
 export const successLight = lighten(success);
 export const successDark = darken(success);
 
-export const warning = css`hselect(34, 100%, 50%)`;
+export const warning = css`hsl(34, 100%, 50%)`;
 export const warningLight = lighten(warning);
 export const warningDark = darken(warning);
 
-export const danger = css`hselect(350, 100%, 50%)`;
+export const danger = css`hsl(350, 100%, 50%)`;
 export const dangerLight = lighten(danger);
 export const dangerDark = darken(danger);
 
