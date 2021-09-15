@@ -1,11 +1,11 @@
 import {expect, fixture} from '@open-wc/testing';
 import {html} from 'lit';
 import {spy} from 'sinon';
-import WlButton from './button';
+import WlButton from '.';
 
 describe('Button', () => {
   before(async () => {
-    await import('./button');
+    await import('.');
   });
 
   it('should render', async () => {

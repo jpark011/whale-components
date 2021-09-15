@@ -1,11 +1,11 @@
 import {elementUpdated, expect, fixture} from '@open-wc/testing';
 import {html} from 'lit';
 import {spy} from 'sinon';
-import WlIcon from './icon';
+import WlIcon from '.';
 
 describe('Icon', () => {
   before(async () => {
-    await import('./icon');
+    await import('.');
   });
 
   it('should render', async () => {
