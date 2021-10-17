@@ -34,7 +34,7 @@ export default class WlButton extends LitElement {
         @click=${this.onClick}
       >
         <slot name="left-icon" part="left-icon"></slot>
-        <slot part="text" class="text">BUTTON</slot>
+        <slot part="text" class="text"></slot>
         <slot name="right-icon" part="right-icon"></slot>
       </button>
     `;

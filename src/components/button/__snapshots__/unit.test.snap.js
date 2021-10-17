@@ -15,7 +15,6 @@ snapshots["Button should render"] =
     class="text"
     part="text"
   >
-    BUTTON
   </slot>
   <slot
     name="right-icon"

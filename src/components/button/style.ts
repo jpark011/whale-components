@@ -18,7 +18,7 @@ export const primaryStyle = css`
     color: var(--wl-button-text-color);
     border: none;
     border-radius: 5px;
-    padding: 8px 16px;
+    padding: 8px 12px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
