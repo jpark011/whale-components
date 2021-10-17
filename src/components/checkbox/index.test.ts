@@ -38,6 +38,15 @@ describe('Checkbox', () => {
     expect(input?.checked).to.equal(true);
   });
 
+  it('should be indeterminate when indeterminate attribute is set', async () => {
+    const el = await fixture<WlCheckbox>(html`<wl-checkbox indeterminate></wl-checkbox>`);
+    const input = el.shadowRoot?.querySelector('input');
+
+    expect(el.indeterminate).to.equal(true);
+    expect(input?.checked).to.equal(false);
+    expect(input?.indeterminate).to.equal(true);
+  });
+
   it('should be disabled when disabled attribute is set', async () => {
     const el = await fixture<WlCheckbox>(html`<wl-checkbox disabled></wl-checkbox>`);
     const input = el.shadowRoot?.querySelector('input');

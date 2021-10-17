@@ -22,10 +22,11 @@ describe('Button', () => {
   });
 
   it('should dispatch click event', async () => {
-    const el = await fixture<WlButton>(html`<wl-button></wl-button>`);
     const onClick = spy();
+    const el = await fixture<WlButton>(
+      html`<wl-button @click=${onClick as () => void}></wl-button>`
+    );
 
-    el.addEventListener('click', onClick);
     el.shadowRoot?.querySelector('button')?.click();
 
     expect(onClick.calledOnce).to.equal(true);
