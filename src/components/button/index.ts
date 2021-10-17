@@ -6,7 +6,7 @@ import {primaryStyle, secondaryStyle} from './style';
 export type WlButtonType = 'primary' | 'secondary';
 
 @customElement('wl-button')
-export default class WlButton extends LitElement {
+export class WlButton extends LitElement {
   static styles = [primaryStyle, secondaryStyle];
 
   @property({reflect: true})

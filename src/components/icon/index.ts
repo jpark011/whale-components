@@ -5,7 +5,7 @@ import {unsafeSVG} from 'lit/directives/unsafe-svg.js';
 const style = css``;
 
 @customElement('wl-icon')
-export default class WlIcon extends LitElement {
+export class WlIcon extends LitElement {
   static styles = [style];
 
   @property({reflect: true})

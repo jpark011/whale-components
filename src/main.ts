@@ -1,2 +1,3 @@
-export {default as WlButton} from './components/button';
-export {default as WlIcon} from './components/icon';
+export {WlButton} from './components/button';
+export {WlCheckbox} from './components/checkbox';
+export {WlIcon} from './components/icon';
